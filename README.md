@@ -30,41 +30,29 @@ Learn and practice Python project structure (venv, Git, modular code, etc.)
 🛠️ Installation
 Clone the project:
 
-bash
-Copier
-Modifier
+
 git clone https://github.com/your-username/ReadAndSpeak.git
 cd ReadAndSpeak
 Create a virtual environment:
 
-bash
-Copier
-Modifier
+
 python -m venv venv
 Activate it:
 
 Windows:
 
-bash
-Copier
-Modifier
+
 venv\Scripts\activate
 macOS / Linux:
 
-bash
-Copier
-Modifier
+
 source venv/bin/activate
 Install dependencies:
 
-bash
-Copier
-Modifier
+
 pip install -r requirements.txt
 🗂️ Project Structure
-bash
-Copier
-Modifier
+
 ReadAndSpeak/
 ├── main.py               # Main entry point
 ├── venv/                 # Virtual environment (not tracked by Git)
