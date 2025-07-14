@@ -1,84 +1,88 @@
 📚 ReadAndSpeak
+ReadAndSpeak is a Python application that allows you to:
 
-ReadAndSpeak est une application Python qui permet de :
+📖 Read the content of a PDF file
 
-📖 Lire le contenu d’un fichier PDF
+🔊 Convert it into an audiobook using Text-to-Speech (TTS)
 
-🔊 Le convertir en audiobook grâce à la synthèse vocale (Text-to-Speech)
+🗣️ Recognize user voice input and convert it into text (Speech-to-Text)
 
-🗣️ Reconnaître la voix de l’utilisateur pour convertir l’audio en texte (Speech-to-Text)
+🚀 Project Goals
+Create a useful tool to:
 
-🚀 Objectifs du projet
+Listen to any PDF (e.g. course material, books, articles…)
 
-Créer un outil pratique pour :
+Transcribe voice notes into text
 
-Écouter n’importe quel PDF (cours, livre, article…)
+Learn and practice Python project structure (venv, Git, modular code, etc.)
 
-Transcrire des notes vocales en texte
+🔧 Planned Features
+✅ Extract text from PDF files (using pdfplumber)
 
-Découvrir et pratiquer la gestion de projet Python (venv, Git, modules, etc.)
+⏳ Convert text into audio (using gTTS, pyttsx3, etc.)
 
-🔧 Fonctionnalités prévues
+⏳ Transcribe voice to text (using SpeechRecognition, whisper, etc.)
 
-✅ Extraction du texte depuis un fichier PDF (pdfplumber)
+⏳ Build a simple UI with Streamlit or Tkinter
 
-⏳ Conversion du texte en audio (gTTS, pyttsx3, etc.)
-
-⏳ Transcription de la voix en texte (SpeechRecognition, whisper, etc.)
-
-⏳ Interface graphique simple avec Streamlit ou Tkinter
-
-⏳ Option de sauvegarde des fichiers audio et texte
+⏳ Add options to save audio and transcribed text files
 
 🛠️ Installation
-
-Cloner le projet :
+Clone the project:
 
 bash
 Copier
 Modifier
-git clone https://github.com/ton-username/ReadAndSpeak.git
+git clone https://github.com/your-username/ReadAndSpeak.git
 cd ReadAndSpeak
-Créer un environnement virtuel :
+Create a virtual environment:
 
 bash
 Copier
 Modifier
 python -m venv venv
-# Windows :
+Activate it:
+
+Windows:
+
+bash
+Copier
+Modifier
 venv\Scripts\activate
-# macOS / Linux :
+macOS / Linux:
+
+bash
+Copier
+Modifier
 source venv/bin/activate
-Installer les dépendances :
+Install dependencies:
 
 bash
 Copier
 Modifier
 pip install -r requirements.txt
-🗂️ Structure du projet
-
+🗂️ Project Structure
 bash
 Copier
 Modifier
 ReadAndSpeak/
-├── main.py
-├── venv/                   ← Environnement virtuel (non versionné)
-├── requirements.txt        ← Bibliothèques installées
-├── .gitignore              ← Fichiers exclus de Git
-├── README.md               ← Description du projet
-└── assets/                 ← (Optionnel) PDF, audios, tests
+├── main.py               # Main entry point
+├── venv/                 # Virtual environment (not tracked by Git)
+├── requirements.txt      # Installed libraries
+├── .gitignore            # Ignored files/folders
+├── README.md             # Project description
+└── assets/               # (Optional) PDFs, audio files, test data
 📌 To-Do
+Add text-to-speech functionality
 
- Ajout du Text-to-Speech
+Add voice recognition functionality
 
- Ajout de la reconnaissance vocale
+Build a simple user interface
 
- Ajout d’une interface simple
+Enable page-by-page reading
 
- Lecture page par page
+Add auto-summarization (bonus AI feature)
 
- Résumé automatique (bonus IA)
-
-👤 Auteur
+👤 Author
 Ramy Garici
 github.com/RamyGarici
