@@ -25,8 +25,15 @@ voice_index = st.selectbox("🎙️ Choose a voice", options=range(len(voices)),
 if st.button("▶️ Go"):
     
     if action == "🔊 Read aloud" :
-        tts(text=text,voice_index=voice_index)
+        try:
+               tts(text, voice_index=voice_index)
+        except Exception as e:
+               st.error("❌ An error occurred during audio processing.")
+       
     elif action== "💾 Save as audio":
-        tts(text,save=True)
-        st.success("Audio saved successfully!")
+        try:
+               tts(text, voice_index=voice_index,save=True)
+               st.success("✅ Audio saved successfully!")
+        except Exception as e:
+               st.error("An error occurred while saving the audio.")
      
