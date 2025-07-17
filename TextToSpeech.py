@@ -11,31 +11,35 @@ voices_name=[f"{i} -> {voice.name} | {voice.languages}" for i, voice in enumerat
 #Streamlit app setup
 st.set_page_config(page_title="ReadAndSpeak", layout="centered")
 
-
+# Title and description
 st.title("📚 ReadAndSpeak")
 st.header("🗣️ Text to Speech")
 st.write("Convert a PDF into speech or save it as an audio file.")
-
+# File uploader for PDF files
 upload_file=st.file_uploader("Upload a PDF file", type=["pdf"])
 
 if upload_file is not None:
     text=extract_text_from_pdf(upload_file)
     
-
+# Display the extracted text
 
 st.text_area("📖 Extracted Text", value=text, height=300)
 st.write("What would you like to do?")
 action = st.radio("Action", ["🔊 Read aloud", "💾 Save as audio"])
 voice_index = st.selectbox("🎙️ Choose a voice", options=range(len(voices)), format_func=lambda i: voices_name[i])
+#
 if st.button("▶️ Go"):
     
+    
     if action == "🔊 Read aloud" :
+        # Try to convert text to speech
         try:
                tts(text, voice_index=voice_index)
         except Exception as e:
                st.error("❌ An error occurred during audio processing.")
        
     elif action == "💾 Save as audio":
+        # Try to save the audio file
         try:
             with tempfile.TemporaryDirectory() as tmpdirname:
                 temp_path = os.path.join(tmpdirname, "speech.mp3")

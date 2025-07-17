@@ -2,16 +2,17 @@ import streamlit as st
 import pyttsx3,os,tempfile
 import speech_recognition as sr
 
-
+text=""
+# Initialize the speech recognizer
 st.title("🗣️ Speech to Text")
 
 if st.button("🎙️ Parler maintenant"):
     recognizer = sr.Recognizer()
-
+# Use the microphone as the audio source
     with sr.Microphone() as source:
         st.info("Parle maintenant...")
         audio = recognizer.listen(source)
-
+# Process the audio and convert it to text
         with st.spinner("🧠 Transcription en cours..."):
             try:
                 text = recognizer.recognize_google(audio, language="fr-FR")
@@ -21,6 +22,7 @@ if st.button("🎙️ Parler maintenant"):
                 st.error("❌ Google n'a pas compris l'audio.")
             except sr.RequestError as e:
                 st.error(f"❌ Erreur de requête : {e}")
+
     if text is not None:
         transcription= text.encode('utf-8')
                 

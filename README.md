@@ -1,76 +1,87 @@
 📚 ReadAndSpeak
-ReadAndSpeak is a Python application that allows you to:
+ReadAndSpeak is a Python Streamlit application that allows you to:
 
-📖 Read the content of a PDF file
+📖 Read and extract text from PDF files
 
-🔊 Convert it into an audiobook using Text-to-Speech (TTS)
+🔊 Convert extracted text into audio using Text-to-Speech (TTS)
 
-🗣️ Recognize user voice input and convert it into text (Speech-to-Text)
+🗣️ Convert your voice into text using Speech Recognition (Speech-to-Text)
 
 🚀 Project Goals
-Create a useful tool to:
-
-Listen to any PDF (e.g. course material, books, articles…)
+Listen to any PDF (e.g., books, courses, articles) as audio
 
 Transcribe voice notes into text
 
-Learn and practice Python project structure (venv, Git, modular code, etc.)
-
-🔧 Planned Features
-✅ Extract text from PDF files (using pdfplumber)
-
-⏳ Convert text into audio (using gTTS, pyttsx3, etc.)
-
-⏳ Transcribe voice to text (using SpeechRecognition, whisper, etc.)
-
-⏳ Build a simple UI with Streamlit or Tkinter
-
-⏳ Add options to save audio and transcribed text files
+Practice Python modular project structure (virtual environment, Streamlit pages, Git)
 
 🛠️ Installation
-Clone the project:
+Clone the repository:
 
-
+bash
+Copier
+Modifier
 git clone https://github.com/your-username/ReadAndSpeak.git
 cd ReadAndSpeak
 Create a virtual environment:
 
-
+bash
+Copier
+Modifier
 python -m venv venv
-Activate it:
+Activate the virtual environment:
 
-Windows:
+On Windows:
 
-
+bash
+Copier
+Modifier
 venv\Scripts\activate
-macOS / Linux:
+On macOS/Linux:
 
-
+bash
+Copier
+Modifier
 source venv/bin/activate
 Install dependencies:
 
-
+bash
+Copier
+Modifier
 pip install -r requirements.txt
 🗂️ Project Structure
-
+bash
+Copier
+Modifier
 ReadAndSpeak/
-├── main.py               # Main entry point
-├── venv/                 # Virtual environment (not tracked by Git)
-├── requirements.txt      # Installed libraries
-├── .gitignore            # Ignored files/folders
-├── README.md             # Project description
-└── assets/               # (Optional) PDFs, audio files, test data
-📌 To-Do
-Add text-to-speech functionality
+├── pdf_reader.py          # Handles text extraction from PDF files
+├── TextToSpeech.py        # Converts text to speech (TTS)
+├── tts.py                 # (Optional) Shared TTS utilities
+├── requirements.txt       # Project dependencies
+├── .gitignore             # Git ignore rules
+├── README.md              # Project documentation
+├── pages/
+│   └── 02_SpeechToText.py # Page for speech-to-text functionality
+✅ Features Completed
+ PDF text extraction
 
-Add voice recognition functionality
+ Text-to-Speech with audio playback
 
-Build a simple user interface
+ Speech-to-Text using microphone input
 
-Enable page-by-page reading
+ Streamlit UI with sidebar navigation
 
-Add auto-summarization (bonus AI feature)
+ Downloadable transcript or audio
+
+📌 Upcoming Features
+ Page-by-page PDF reading
+
+ Automatic summarization with AI (bonus)
+
+ Dark mode
+
+ Audio file upload and transcription
 
 👤 Author
 Ramy Garici
-github.com/RamyGarici
+🔗 github.com/RamyGarici
+
