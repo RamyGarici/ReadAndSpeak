@@ -17,41 +17,31 @@ Practice Python modular project structure (virtual environment, Streamlit pages,
 🛠️ Installation
 Clone the repository:
 
-bash
-Copier
-Modifier
+
 git clone https://github.com/your-username/ReadAndSpeak.git
 cd ReadAndSpeak
 Create a virtual environment:
 
-bash
-Copier
-Modifier
+
 python -m venv venv
 Activate the virtual environment:
 
 On Windows:
 
-bash
-Copier
-Modifier
+
 venv\Scripts\activate
 On macOS/Linux:
 
-bash
-Copier
-Modifier
+
 source venv/bin/activate
 Install dependencies:
 
-bash
-Copier
-Modifier
+
 pip install -r requirements.txt
+
+streamlit  run TextToSpeech.py
 🗂️ Project Structure
-bash
-Copier
-Modifier
+
 ReadAndSpeak/
 ├── pdf_reader.py          # Handles text extraction from PDF files
 ├── TextToSpeech.py        # Converts text to speech (TTS)
